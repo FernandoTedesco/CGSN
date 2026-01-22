@@ -8,7 +8,10 @@ set(SDL2_LIB "${CMAKE_SOURCE_DIR}/deps/SDL2/lib/x64/SDL2.lib")
 set(SDL2_MAIN_LIB "${CMAKE_SOURCE_DIR}/deps/SDL2/lib/x64/SDL2main.lib")
 set(SDL2_DLL "${CMAKE_SOURCE_DIR}/deps/SDL2/lib/x64/SDL2.dll")
 
-add_executable(CGSN src/main.cpp)
+add_executable(
+    CGSN src/main.cpp
+    src/World.cpp
+    )
 
 target_include_directories(CGSN PRIVATE
 ${CMAKE_SOURCE_DIR}/src

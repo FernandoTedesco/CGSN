@@ -14,4 +14,17 @@ struct Cell{
     float signal; //Invis value for agents to find each other (TBD)
     float density; //how much food/water
     uint8_t r,g,b;// cell color
-}
+};
+
+class World{
+    public:
+    int width, height;
+    std::vector<Cell> grid;
+    World(int w, int h);
+    int getIndex(int x, int y) const;
+
+    Cell& getCell(int x, int y);
+    void setCell(int x, int y, CellType type);
+
+    void generate();
+};
